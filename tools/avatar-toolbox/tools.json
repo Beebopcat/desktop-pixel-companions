@@ -1,0 +1,14 @@
+{
+  "ahk": "%LOCALAPPDATA%\\Programs\\AutoHotkey\\v2\\AutoHotkey64.exe",
+  "tools": [
+    {
+      "id": "ocrboxes",
+      "name": "OCR Boxes",
+      "kind": "ahk",
+      "path": "%LOCALAPPDATA%\\Programs\\Desktop Pixel Companions\\OcrBoxes\\OCR Boxes.ahk",
+      "info": "Read visible windows and screens with a voice per box using Kokoro Player.",
+      "hotkeys": "Fit or add a box; lock it; press Play.",
+      "autostart": false
+    }
+  ]
+}

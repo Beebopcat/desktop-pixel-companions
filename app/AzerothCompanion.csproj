@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>DesktopPixelCompanions</AssemblyName>
+    <Product>Desktop Pixel Companions</Product>
+    <Title>Desktop Pixel Companions</Title>
+    <RootNamespace>AzerothCompanion</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(CompanionFunctionalOnly)' == 'true'">
+    <DefineConstants>$(DefineConstants);COMPANION_FUNCTIONAL_ONLY</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Data\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Resources\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Auditions\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Import Project="Services\Capture.Dependencies.props" Condition="Exists('Services\Capture.Dependencies.props')" />
+
+  <ItemGroup>
+    <Content Include="..\tools\ocr-boxes\OcrBoxes\**\*" Link="OcrBoxes\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\tools\ocr-boxes\rapidocr-helper\**\*" Link="rapidocr-helper\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\tools\ocr-boxes\game-voice-reader\**\*" Link="game-voice-reader\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\tools\avatar-toolbox\**\*" Link="AvatarToolbox\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
