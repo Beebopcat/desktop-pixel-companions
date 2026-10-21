@@ -34,6 +34,27 @@ A Windows WPF desktop companion and accessibility project. This public edition i
 
 The author's installed personal edition keeps its own artwork and voice setup. On 2026-10-20 that installed folder was updated with the newest OCR Boxes while its shortcuts and settings were preserved. The public edition is a source snapshot only: no runnable WPF release or animation-accuracy claim is made for it.
 
+## Roadmap: AI companion mode (planned)
+
+**Status: planned and in development.** Nothing in this section is part of the public source snapshot, except where a line is marked as current.
+
+### Planned capabilities
+
+- **Up to two AI companions at once.** Each companion can be any character with any personality you choose, for any game, and each has its own unique voice.
+- **Real-time voice-to-voice conversation** with **live screen vision**.
+- **Active in-game guidance.** The companions read long on-screen text and help with quests, missions, build-planning recommendations, best practices, game lore and banter, while pulling live information from the internet in the background.
+- **Game-agnostic by design.** Companions work from what is on screen, so they do not need to hook into, inject into or read the memory of a game.
+
+### Requirements and limits
+
+Performance depends on your own hardware: VRAM, CPU and RAM. You can choose a local flagship model, or add an API key for a provider of your choice to use more advanced hosted models with vision and real-time speech.
+
+### Voices
+
+- **Custom-trained Kokoro voices** with emotional narration and banter. *Current:* these are already included in the author's personal edition. They are not part of the public asset-free source.
+- **ElevenLabs voices** through your own API key (planned).
+- **Microsoft Edge's built-in high-fidelity Read Aloud voices** (planned).
+
 ## Built with
 
 - C# / .NET 10
