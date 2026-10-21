@@ -16,6 +16,16 @@ A Windows WPF desktop companion and accessibility project. This public edition i
 
 <sub>Desktop Tools page at the Desktop Pixel Companions card, with its source-snapshot note and Explore the project link.</sub>
 
+## Video
+
+[![Repair tools and desktop companions: the repair widget with tool shortcuts and companions on the desktop.](docs/media/dpc-highlight-1-poster.webp)](docs/media/dpc-highlight-1.mp4)
+
+*Repair tools and desktop companions (40 s, no audio). Click the poster to play.*
+
+[![Voices, quality-of-life hotkeys and OCR Boxes controls, with companions toggled and resized on the desktop.](docs/media/dpc-highlight-2-poster.webp)](docs/media/dpc-highlight-2.mp4)
+
+*Voices, quality-of-life hotkeys and OCR Boxes controls, plus the companions on the desktop (40 s, no audio). Click the poster to play.*
+
 ## How to use
 
 1. Build the project with `dotnet build app/AzerothCompanion.csproj -c Release` (targets .NET 10, Windows).
