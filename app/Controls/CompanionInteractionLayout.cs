@@ -179,7 +179,11 @@ public static class CompanionInteractionLayout
     {
         double x=.44-side*rig.Feet.X;
         if(rig.VisibleBounds is{ } bounds)
-            x=Math.Clamp(x,1.0/47-side*bounds.X,1-1.0/47-side*(bounds.X+bounds.Width));
+        {
+            // A sprite that fills almost the whole canvas width makes lo>hi (Math.Clamp throws); centre it instead.
+            double lo=1.0/47-side*bounds.X,hi=1-1.0/47-side*(bounds.X+bounds.Width);
+            x=lo<=hi?Math.Clamp(x,lo,hi):(lo+hi)/2;
+        }
         return new(x,1-side*rig.Feet.Y);
     }
 }

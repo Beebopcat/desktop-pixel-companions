@@ -365,7 +365,7 @@ public partial class OverlayWindow : Window
                 // all pass this gate before Windows applies any new geometry.
                 var position = Marshal.PtrToStructure<Native.WindowPosition>(lParam);
                 var body = controller.roaming.Bodies[Index]; var work = controller.primary.WorkArea;
-                position.X = Math.Clamp((int)Math.Round(body.X), work.Left, work.Right - (int)body.Width);
+                position.X = Math.Clamp((int)Math.Round(body.X), work.Left, Math.Max(work.Left, work.Right - (int)body.Width));
                 position.Y = work.Bottom - controller.floorSurfaceOffset - (int)body.Height;
                 position.Width = (int)body.Width; position.Height = (int)body.Height;
                 position.Flags = (position.Flags & ~3u) | Native.NoActivate;

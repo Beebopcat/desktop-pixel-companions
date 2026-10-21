@@ -25,7 +25,7 @@ public static class GameEvidenceExcerpt
         int bestStart = 0, bestScore = 0;
         foreach (var hit in hits.OrderBy(h => h.Position))
         {
-            int start = Math.Clamp(hit.Position - maximum / 3, 0, plain.Length - maximum);
+            int start = Math.Clamp(hit.Position - maximum / 3, 0, Math.Max(0, plain.Length - maximum));
             // Start at a nearby sentence boundary when one fits before the evidence.
             int boundary = plain.LastIndexOf(". ", Math.Min(start, plain.Length - 1), Math.Min(start + 1, 160), StringComparison.Ordinal);
             if (boundary >= 0) start = boundary + 2;
